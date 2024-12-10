@@ -1,0 +1,7 @@
+{
+  "name": "devcontainer of blog.sekai013.dev",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+  "features": {
+    "ghcr.io/devcontainers/features/hugo:1": {}
+  }
+}

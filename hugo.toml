@@ -1,0 +1,42 @@
+baseURL = 'https://blog.sekai013.dev/'
+languageCode = 'ja-jp'
+title = 'blog.sekai013.dev'
+theme = 'gokarna'
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 1
+    endLevel = 4
+    ordered = false
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pre = "<span data-feather='home'></span>"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Posts"
+    pre = "<span data-feather='book'></span>"
+    url = "/posts/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Tags"
+    pre = "<span data-feather='tag'></span>"
+    url = "/tags/"
+    weight = 3
+
+  [[menu.main]]
+    name =  "RSS"
+    identifier = "rss"
+    pre = "<span data-feather='rss'></span>"
+    url = "/index.xml"
+    weight = 4
+
+[minify]
+  minifyOutput = true
+
+[params]
+  showPostsOnHomePage = "recent"

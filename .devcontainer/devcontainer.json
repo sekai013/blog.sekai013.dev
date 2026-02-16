@@ -2,7 +2,17 @@
   "name": "devcontainer of blog.sekai013.dev",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
   "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
     "ghcr.io/devcontainers/features/hugo:1": {},
     "ghcr.io/devcontainers-extra/features/ffmpeg-apt-get": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "OpenAI.chatgpt"
+      ]
+    }
   }
 }

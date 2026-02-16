@@ -1,0 +1,44 @@
+backend:
+  name: github
+  repo: sekai013/blog.sekai013.dev
+  branch: main
+  # If your OAuth broker requires custom endpoints, uncomment and set:
+  # base_url: https://your-oauth-broker.example.com
+  # auth_endpoint: /auth
+
+local_backend: true
+site_url: https://blog.sekai013.dev
+publish_mode: editorial_workflow
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: content/posts
+    create: true
+    path: "{{slug}}/index"
+    slug: "{{slug}}"
+    preview_path: "posts/{{slug}}/"
+    media_folder: ""
+    public_folder: ""
+    format: frontmatter
+    extension: md
+    editor:
+      preview: false
+    sortable_fields:
+      - date
+      - lastmod
+      - title
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+      - { name: lastmod, label: Last Modified, widget: datetime, date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { name: description, label: Description, widget: text, required: false }
+      - { name: image, label: OGP Image, widget: image, required: false }
+      - { name: showTableOfContents, label: Show TOC, widget: boolean, default: false, required: false }
+      - { name: tags, label: Tags, widget: list, required: false, default: [] }
+      - { name: type, label: Type, widget: hidden, default: post }
+      - { name: body, label: Body, widget: markdown }

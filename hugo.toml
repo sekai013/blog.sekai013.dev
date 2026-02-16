@@ -2,6 +2,7 @@ baseURL = 'https://blog.sekai013.dev/'
 languageCode = 'ja-jp'
 title = 'blog.sekai013.dev'
 theme = 'gokarna'
+timeZone = 'Asia/Tokyo'
 
 [markup]
   [markup.tableOfContents]

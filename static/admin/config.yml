@@ -6,9 +6,13 @@ backend:
   # base_url: https://your-oauth-broker.example.com
   # auth_endpoint: /auth
 
-local_backend: true
 site_url: https://blog.sekai013.dev
 publish_mode: editorial_workflow
+
+# Match Netlify/Decap CMS output: omit optional fields left empty
+# (e.g. description, image, lastmod) instead of writing them as "".
+output:
+  omit_empty_optional_fields: true
 
 media_folder: static/img
 public_folder: /img

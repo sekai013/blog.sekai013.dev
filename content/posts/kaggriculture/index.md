@@ -2,7 +2,6 @@
 title: Kaggriculture
 date: 2026-10-04
 lastmod: 2026-10-04
-image: pasted-image-1791083565640.png
 showTableOfContents: false
 tags:
   - kaggle
